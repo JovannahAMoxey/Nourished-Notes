@@ -1,0 +1,376 @@
+/* my_css.css - custom styles for Submission 01 */
+
+
+/* 
+   Color variables for the whole site.
+   This makes it easier to change the theme later without hunting
+   through the whole file for every single purple or background color.
+*/
+:root{
+  --bg: #fcf9ff;              /* overall page background */
+  --card: #ffffff;            /* white used for cards/boxes */
+  --ink: #2f2940;             /* main text color */
+  --muted: #7b728f;           /* softer text color for paragraphs */
+  --accent: #b79ad6;          /* main lavender accent */
+  --accent-dark: #7f679f;     /* darker purple for links/headings */
+  --shell: #f7f2fc;           /* pale lavender container background */
+  --shellBorder: #eee4f8;     /* soft border color */
+  --nav: rgba(255,255,255,0.75); /* navbar background */
+  --hover: #f6effc;           /* hover color for links/buttons */
+  --shadow: 0 10px 30px rgba(80, 51, 120, 0.08); /* soft shadow */
+}
+
+
+/* 
+   Styles for the whole page body.
+   This controls the overall background, text color, and font feel.
+*/
+body{
+  background: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif; /* gives a softer editorial feel */
+  line-height: 1.6; /* adds breathing room between lines of text */
+}
+
+
+/* 
+   Heading styles.
+   This affects h1, h2, h3, and h4 throughout the page.
+   If your headings ever feel too bold or too harsh, this is a good place to adjust them.
+*/
+h1, h2, h3, h4{
+  font-weight: 500;          /* slightly softer than bold */
+  letter-spacing: 0.02em;    /* tiny bit of spacing for a cleaner look */
+  margin-top: 0;
+  color: var(--ink);
+}
+
+
+/* 
+   Paragraph styling.
+   This makes paragraph text a little softer than headings so the page feels calmer.
+*/
+p{
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+
+/* 
+   Generic white card style.
+   Use this class on any section you want to look like a soft content card.
+*/
+.site-card{
+  background: var(--card);
+  border-radius: 16px;
+}
+
+
+/* 
+   Utility class for accent-colored text.
+   Good for highlighting a word, heading, or label.
+*/
+.site-accent{
+  color: var(--accent);
+}
+
+
+/* 
+   Footer text.
+   Makes the footer feel lighter and less visually heavy than the main content.
+*/
+.site-footer{
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 36px;
+  color: var(--muted);
+}
+
+
+/* 
+   Main shell/container.
+   This is useful if you want a soft panel behind a section of content.
+   You can increase the padding later if the content feels cramped.
+*/
+.nn-shell{
+  background: var(--card);
+  border: 1px solid var(--shellBorder);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+
+/* 
+   Header wrapper.
+   This is the main container holding the logo on one side
+   and the welcome/login/quote content on the other side.
+   display: flex puts the left and right sections next to each other.
+*/
+.nn-header{
+  display: flex;
+  justify-content: space-between; /* pushes left and right sections apart */
+  align-items: center;            /* lines them up vertically */
+  gap: 32px;                      /* space between logo and text area */
+  padding: 18px 0 28px 0;
+  border-bottom: 1px solid var(--shellBorder);
+  margin-bottom: 24px;
+}
+
+
+/* 
+   Left part of the header.
+   This is mainly for the logo section.
+   flex: 0 0 auto stops it from stretching weirdly.
+*/
+.nn-header-left{
+  flex: 0 0 auto;
+}
+
+
+/* 
+   Right part of the header.
+   This holds the welcome text, login link, and quote.
+   It stacks them vertically and aligns them to the right.
+*/
+.nn-header-right{
+  flex: 1;                       /* lets this side take up remaining space */
+  display: flex;
+  flex-direction: column;        /* stacks content top to bottom */
+  justify-content: center;
+  text-align: right;
+}
+
+
+/* 
+   Logo image.
+   Change width here if the logo looks too big or too small.
+   height: auto keeps it from stretching out of shape.
+*/
+.nn-logo{
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* 
+   Welcome heading inside the header.
+   Change font-size if you want the welcome message larger or smaller.
+*/
+.nn-header-right h2{
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+}
+
+
+/* 
+   Login link inside the header.
+   align-self: flex-end keeps it from stretching across the whole row.
+   This is useful because the parent is a flex column.
+*/
+.nn-header-right a{
+  align-self: flex-end;
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+
+/* 
+   Login hover effect.
+   Keeps the interaction simple and clean.
+*/
+.nn-header-right a:hover{
+  text-decoration: underline;
+}
+
+
+/* 
+   Quote paragraph inside the header.
+   max-width stops the text from becoming too wide and hard to read.
+   margin-left: auto keeps it sitting on the right side.
+*/
+.nn-header-right p{
+  max-width: 500px;
+  margin-left: auto;
+}
+
+
+/* 
+   Navbar container.
+   This creates the pill-shaped menu bar.
+   The rounded shape and shadow help it feel more modern.
+*/
+.nn-navbar{
+  display: flex;
+  justify-content: center;
+  gap: 10px;                     /* space between nav links */
+  background: var(--nav);
+  border: 1px solid var(--shellBorder);
+  border-radius: 999px;          /* large value makes it fully rounded */
+  padding: 8px 12px;
+  margin: 22px 0 34px 0;
+  box-shadow: var(--shadow);
+}
+
+
+/* 
+   Navbar links.
+   These are the clickable items inside the menu.
+   Padding controls how tall/wide each link feels.
+*/
+.nn-navbar a{
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+
+/* 
+   Navbar hover effect.
+   Adds a soft background and tiny lift when the mouse is over a link.
+*/
+.nn-navbar a:hover{
+  background-color: var(--hover);
+  transform: translateY(-1px);
+}
+
+
+/* 
+   Product/content box.
+   This can be reused for featured products or highlighted sections.
+*/
+.nn-product-box{
+  background: var(--card);
+  border: 1px solid var(--shellBorder);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+
+/* 
+   Small section label at the top of a box.
+   This works well for things like "Featured Product".
+   It is styled to look more like a label than a chunky banner.
+*/
+.nn-banner{
+  display: inline-block;
+  background: transparent;
+  color: var(--accent-dark);
+  padding: 16px 20px 0 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+
+/* 
+   Product image.
+   max-width controls the largest size the image can grow to.
+   margin: 0 auto centers the image inside its container.
+*/
+.nn-product-img{
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* 
+   Optional product title.
+   Use this class if you want a nicer style for the product name.
+*/
+.nn-product-title{
+  font-size: 1.25rem;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+
+/* 
+   Mobile/tablet adjustments.
+   This section only activates on smaller screens.
+   It changes the layout so the header stacks nicely instead of being squeezed.
+*/
+@media (max-width: 700px){
+  .nn-header{
+    flex-direction: column;   /* logo and text stack vertically on smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+
+  .nn-header-right{
+    text-align: center;
+    align-items: center;
+  }
+
+  .nn-header-right p{
+    margin-left: 0;
+  }
+
+  .nn-header-right a{
+    align-self: center;
+  }
+
+  .nn-navbar{
+    flex-wrap: wrap;          /* allows nav items to move to a new line if needed */
+    border-radius: 24px;
+  }
+}
+
+/* Quote box in the header */
+.nn-quote-box{
+  background: #ffffff;
+  border: 1px solid var(--shellBorder);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-top: 10px;
+  box-shadow: var(--shadow);
+}
+
+.carousel-container {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel-container .my_slides {
+  display: none;
+  width: 280px;
+  max-height: 220px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.carousel-container .my_labels {
+  display: none;
+  width: 280px;
+  margin: 10px auto 0 auto;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.carousel-container .my_labels h5 {
+  margin: 0;
+}
