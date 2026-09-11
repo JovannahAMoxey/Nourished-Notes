@@ -1,67 +1,139 @@
-Name: Jovannah Moxey
-Student ID: U24
-Submission: Submission 04
-Website Title: Nourished Notes
+# 🌱 Nourished Notes
 
-Files and folders added/updated:
+**Developer:** Jovannah Moxey
+**Status:** In Development / Portfolio Rebuild
+**Original Project:** University Web Development Project
 
-Updated:
-- common/banner.php
-- common/navbar.php
-- pages/sitemap.php
-- my_business.php
+## About the Project
 
-New Pages:
-- pages/register.php
-- pages/login.php
+**Nourished Notes** is a faith-inspired, database-driven web application that combines daily Scripture-based encouragement with an e-commerce experience.
 
-New Scripts:
-- scripts/connect_to_database.php
-- scripts/process_registration.php
-- scripts/process_login.php
-- scripts/process_logout.php
+The project was originally developed as part of my Computer Science coursework and gave me hands-on experience building a full-stack web application using **PHP, MySQL, MongoDB, HTML, CSS, and JavaScript**.
 
-MySQL Scripts:
-- scripts/mysql/create_my_customers.sql
+I am currently revisiting Nourished Notes as a portfolio project — restoring its original functionality, improving the codebase and user experience, and preparing the application for a future live demo.
 
---------------------------------------------------
+## ✨ Features
 
-Features completed:
+### Daily Scripture
 
-- Created a MySQL table (my_customers) to store customer data
-- Implemented a customer registration system:
-  - Validates user input on both client and server side
-  - Prevents duplicate email addresses
-  - Prevents duplicate usernames
-  - Stores passwords securely using password hashing
-  - Retains form values when validation fails
-- Implemented a login system:
-  - Verifies username and password using secure password comparison
-  - Displays appropriate error messages for invalid login attempts
-- Implemented a logout system:
-  - Logs out users by clearing session data
-  - Displays appropriate messages depending on login state
-- Used PHP sessions to track logged-in users
-- Personalized the welcome message in the banner using session data
-- Updated navigation and sitemap links to include:
-  - Register
-  - Log In
-  - Log Out
-- Maintained consistent layout using shared PHP includes
+Nourished Notes retrieves Scripture-based encouragement from a **MongoDB** collection and displays a daily quote to the user.
 
---------------------------------------------------
+Each entry contains:
 
-Notes:
+* A Scripture reference
+* A Scripture-based quote
+* A descriptive theme or adjective
 
-- Passwords are stored securely using PHP’s password_hash() function
-- Login verification is performed using password_verify()
-- Session variables are used to store user information after login or registration
-- Logout messages are displayed on the login page using session-based messaging
-- The banner dynamically updates to display a personalized welcome message when a user is logged in
+### Customer Registration
 
---------------------------------------------------
+Users can create an account through the registration system.
 
-Known issues:
+The application:
 
-- Some UI elements (e.g., e-store features) are placeholders for future submissions
-- Minor styling improvements may still be in progress
+* Validates input on both the client and server
+* Prevents duplicate email addresses
+* Prevents duplicate usernames
+* Securely hashes passwords before storage
+* Retains appropriate form values when validation fails
+
+### Authentication
+
+The PHP authentication system supports:
+
+* Customer login
+* Secure password verification
+* Customer logout
+* Session-based authentication
+* Personalized content for authenticated users
+* Login and logout status messaging
+
+Passwords are stored using PHP's `password_hash()` function and verified using `password_verify()`.
+
+### E-Commerce
+
+Nourished Notes includes the foundation for a database-driven storefront, including:
+
+* Product categories
+* Product information
+* Pricing
+* Inventory quantities
+* Product imagery
+* Customer accounts
+
+Additional storefront functionality is being restored and refined as part of the portfolio rebuild.
+
+## 🛠️ Technologies
+
+* **PHP 8**
+* **MySQL**
+* **MongoDB**
+* **PDO**
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **PHP Sessions**
+* **Git & GitHub**
+
+## 🗄️ Database Architecture
+
+Nourished Notes currently uses two database technologies.
+
+**MySQL** manages structured relational application data, including:
+
+* `my_customers`
+* `my_categories`
+* `my_products`
+
+**MongoDB** stores the Scripture-based content used by the daily encouragement feature.
+
+This project gave me experience working with both relational and document-oriented databases within the same PHP application.
+
+## 📁 Project Structure
+
+Key areas of the project include:
+
+```text
+common/          Shared PHP components such as the banner and navigation
+pages/           Application pages including registration and login
+scripts/         PHP processing and database connection scripts
+scripts/mysql/   MySQL schema and database scripts
+resources/       Supporting application resources
+my_business.php  Main application page
+```
+
+## 🔐 Security
+
+The application incorporates several basic security practices:
+
+* Password hashing with `password_hash()`
+* Password verification with `password_verify()`
+* Server-side form validation
+* Duplicate username and email prevention
+* Session-based authentication
+
+Database credentials and other sensitive configuration should not be committed to the public repository.
+
+## 🚧 Current Development
+
+I am currently revisiting the original university project and modernizing it for my software development portfolio.
+
+Current work includes:
+
+* Restoring the original MySQL data and functionality
+* Restoring MongoDB integration
+* Reviewing and refactoring older PHP code
+* Improving project organization
+* Refining the UI and user experience
+* Improving configuration and credential management
+* Preparing the application for deployment
+
+## 🌿 What's Next
+
+The goal is to transform Nourished Notes from an archived university assignment into a polished portfolio application while preserving the core concept that inspired the original project.
+
+Planned improvements include continued code cleanup, storefront enhancements, UI refinements, improved configuration management, and a publicly accessible **live demo**.
+
+---
+
+**Nourished Notes** 🌱
+*Nourishing faith, one note at a time.*
