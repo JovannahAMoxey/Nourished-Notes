@@ -1,0 +1,20 @@
+[
+  {
+    "_id": 1,
+    "author": "Psalm 46:10",
+    "text": "Be still, and know that I am God.",
+    "adjective": "peaceful"
+  },
+  {
+    "_id": 2,
+    "author": "Proverbs 3:5",
+    "text": "Trust in the Lord with all your heart and lean not on your own understanding.",
+    "adjective": "encouraging"
+  },
+  {
+    "_id": 3,
+    "author": "Isaiah 40:31",
+    "text": "Those who hope in the Lord will renew their strength.",
+    "adjective": "uplifting"
+  }
+]

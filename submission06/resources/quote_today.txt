@@ -1,0 +1,1 @@
+{"date":"2026-03-21","quote":{"_id":2,"author":"Proverbs 3:5","text":"Trust in the Lord with all your heart and lean not on your own understanding.","adjective":"encouraging"}}
