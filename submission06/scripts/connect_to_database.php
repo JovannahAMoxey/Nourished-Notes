@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
 
-$host = "localhost";
-$dbname = "u24";
-$user = "u24";
-$pass = "NourishedApp26!";
+$dbname = "YOUR_DATABASE_NAME";
+$user = "YOUR_DATABASE_USERNAME";
+$pass = "YOUR_DATABASE_PASSWORD";
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
