@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 function getDailyQuoteFromMongo(): array
 {
-    $mongoPassword = "44CoveredPulledMercury";
-    $mongoUser = "u24";
-    $dbName = "u24";
+$mongoPassword = "YOUR_REAL_PASSWORD";
+$mongoUser = "u24";
+$dbName = "u24";
     $collName = "quotes";
 
     try {
